@@ -2,7 +2,7 @@
 
 > 官方文档：https://fluent.thinkstu.com/
 
-[English](https://github.com/Bistutu/FluentRead/blob/main/misc/README_EN.md) | 中文
+[English](https://github.com/tangaac/FluentRead/blob/main/misc/README_EN.md) | 中文
 
 一款革新性的浏览器开源翻译插件，让所有人都能够拥有母语般的阅读体验。[B站视频介绍](https://www.bilibili.com/video/BV1ux4y1e73x/)
 
@@ -18,14 +18,6 @@
 
 <kbd><img src="./misc/sample-git-4.gif" alt="sample-git-4.gif" style="width: 80%; max-width: 100%;border: 1px solid black;"></kbd>
 
-## 📦 安装
-
-| 浏览器 | 安装方式 |
-|-------|---------|
-| Chrome | [Chrome 应用商店](https://chromewebstore.google.com/detail/%E6%B5%81%E7%95%85%E9%98%85%E8%AF%BB/djnlaiohfaaifbibleebjggkghlmcpcj?hl=zh-CN&authuser=0) \| [国内镜像](https://www.crxsoso.com/webstore/detail/djnlaiohfaaifbibleebjggkghlmcpcj) |
-| Edge | [Edge 应用商店](https://microsoftedge.microsoft.com/addons/detail/%E6%B5%81%E7%95%85%E9%98%85%E8%AF%BB/kakgmllfpjldjhcnkghpplmlbnmcoflp?hl=zh-CN) |
-| Firefox | [Firefox 附加组件商店](https://addons.mozilla.org/zh-CN/firefox/addon/%E6%B5%81%E7%95%85%E9%98%85%E8%AF%BB/) |
-
 ## 📖 使用文档
 
 请直接访问 [流畅阅读官方文档](https://fluent.thinkstu.com/) 获取详细的：
@@ -37,4 +29,3 @@
 # Star 历史记录
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Bistutu/FluentRead&type=Date)](https://star-history.com/#Bistutu/FluentRead&Date)
-

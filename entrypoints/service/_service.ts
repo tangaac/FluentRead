@@ -1,4 +1,4 @@
-import {services} from "../utils/option";
+import { services } from "../utils/option";
 import microsoft from "./microsoft";
 import deepl from "./deepl";
 import custom from "./custom";
@@ -14,9 +14,10 @@ import minimax from "@/entrypoints/service/minimax";
 import common from "@/entrypoints/service/common";
 import coze from "@/entrypoints/service/coze";
 import deepseek from "./deepseek";
+import loong from "./loong";
 
 type ServiceFunction = (message: any) => Promise<any>;
-type ServiceMap = {[key: string]: ServiceFunction;};
+type ServiceMap = { [key: string]: ServiceFunction; };
 
 export const _service: ServiceMap = {
     // 传统机器翻译
@@ -27,6 +28,7 @@ export const _service: ServiceMap = {
 
     // 大模型翻译
     [services.custom]: custom,
+    [services.loong]: loong,
     [services.tongyi]: tongyi,
     [services.zhipu]: zhipu,
     [services.yiyan]: yiyan,
