@@ -28,6 +28,7 @@ export const services = {
     siliconCloud: "siliconCloud", // 硅流
     openrouter: "openrouter", // openrouter
     grok: "grok", // X.AI 的 Grok
+    loong: "loong", // loong
 };
 
 export const servicesType = {
@@ -170,13 +171,13 @@ export const models = new Map<string, Array<string>>([
 
 export const options = {
     on: [
-        {value: true, label: "开启"},
-        {value: false, label: "关闭"},
+        { value: true, label: "开启" },
+        { value: false, label: "关闭" },
     ],
     // 是否即时翻译
     autoTranslate: [
-        {value: true, label: "开启"},
-        {value: false, label: "关闭"},
+        { value: true, label: "开启" },
+        { value: false, label: "关闭" },
     ],
     // 是否使用缓存
     useCache: [
@@ -185,42 +186,43 @@ export const options = {
     ],
     form: [{value: "auto", label: "自动检测"}],
     to: [
-        {value: "zh-Hans", label: "中文"},
-        {value: "en", label: "英语"},
-        {value: "ja", label: "日语"},
-        {value: "ko", label: "韩语"},
-        {value: "fr", label: "法语"},
-        {value: "ru", label: "俄语"},
+        { value: "zh-Hans", label: "中文" },
+        { value: "en", label: "英语" },
+        { value: "ja", label: "日语" },
+        { value: "ko", label: "韩语" },
+        { value: "fr", label: "法语" },
+        { value: "ru", label: "俄语" },
     ],
     keys: [
 
-        {value: "Computer", label: "键盘选项", disabled: true},
-        {value: "Control", label: "Ctrl"},
-        {value: "Alt", label: "Alt"},
-        {value: "Shift", label: "Shift"},
-        {value: "`", label: "波浪号键"},
+        { value: "Computer", label: "键盘选项", disabled: true },
+        { value: "Control", label: "Ctrl" },
+        { value: "Alt", label: "Alt" },
+        { value: "Shift", label: "Shift" },
+        { value: "`", label: "波浪号键" },
 
         {value: "mouse", label: "鼠标选项", disabled: true},
         {value: "DoubleClick", label: "鼠标双击"},
         {value: "LongPress", label: "鼠标长按"},
         {value: "MiddleClick", label: "鼠标滚轮单击"},
 
-        {value: "touchscreen", label: "触屏设备选项", disabled: true},
-        {value: "TwoFinger", label: "双指翻译"},
-        {value: "ThreeFinger", label: "三指翻译"},
-        {value: "FourFinger", label: "四指翻译"},
-        {value: "DoubleClickScree", label: "双击翻译"},
-        {value: "TripleClickScree", label: "三击翻译"},
+        { value: "touchscreen", label: "触屏设备选项", disabled: true },
+        { value: "TwoFinger", label: "双指翻译" },
+        { value: "ThreeFinger", label: "三指翻译" },
+        { value: "FourFinger", label: "四指翻译" },
+        { value: "DoubleClickScree", label: "双击翻译" },
+        { value: "TripleClickScree", label: "三击翻译" },
     ],
     services: [
         // 传统机器翻译
-        {value: "machine", label: "机器翻译", disabled: true},
-        {value: services.microsoft, label: "微软翻译"},
-        {value: services.google, label: "谷歌翻译"},
-        {value: services.deepL, label: "DeepL"},
-        {value: services.xiaoniu, label: "小牛翻译"},
+        { value: "machine", label: "机器翻译", disabled: true },
+        { value: services.microsoft, label: "微软翻译" },
+        { value: services.google, label: "谷歌翻译" },
+        { value: services.deepL, label: "DeepL" },
+        { value: services.xiaoniu, label: "小牛翻译" },
         // 大模型翻译
         {value: "ai", label: "AI翻译", disabled: true},
+        {value: services.loong, label: "Loong"},
         {value: services.deepseek, label: "DeepSeek⭐️"},
         {value: services.siliconCloud, label: "硅基流动-SiliconFlow⭐️"},
         {value: services.huanYuan, label: "腾讯混元⭐"},
@@ -245,8 +247,8 @@ export const options = {
         {value: services.custom, label: "⭐自定义⭐️"},
     ],
     display: [
-        {value: 0, label: "仅译文模式"},
-        {value: 1, label: "双语对照模式"},
+        { value: 0, label: "仅译文模式" },
+        { value: 1, label: "双语对照模式" },
     ],
     // 双语翻译样式
     styles: [
@@ -309,9 +311,9 @@ export const options = {
         {value: "none", label: "禁用快捷键"},
     ],
     theme: [
-        {value: "auto", label: "跟随操作系统"},
-        {value: "light", label: "亮色主题"},
-        {value: "dark", label: "暗色主题"},
+        { value: "auto", label: "跟随操作系统" },
+        { value: "light", label: "亮色主题" },
+        { value: "dark", label: "暗色主题" },
     ],
 };
 
@@ -322,7 +324,7 @@ export const defaultOption = {
     style: 1,
     display: 1,
     hotkey: "Control",
-    service: services.microsoft,
+    service: services.loong,
     custom: "http://localhost:11434/v1/chat/completions",
     system_role:
         "You are a professional, authentic machine translation engine.",

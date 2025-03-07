@@ -1,6 +1,5 @@
 import {_service} from "@/entrypoints/service/_service";
 import {config} from "@/entrypoints/utils/config";
-import {reportTranslationCount} from "@/entrypoints/utils/influx-reporter";
 
 export default defineBackground({
     persistent: {
@@ -16,14 +15,5 @@ export default defineBackground({
                     .catch(error => reject(error)); // 失败
             });
         });
-
-        reportTranslationCount().catch(error => {
-            console.error('init report failed:', error);
-        });
-        setInterval(() => {
-            reportTranslationCount().catch(error => {
-                console.error('report failed:', error);
-            });
-        }, 300000);
     }
 });
