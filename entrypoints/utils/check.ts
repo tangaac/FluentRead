@@ -1,4 +1,3 @@
-import { S } from "wxt/dist/index-nWRfwAJi";
 import { customModelString, services, servicesType } from "./option";
 import { sendErrorMessage } from "./tip";
 import { config } from "@/entrypoints/utils/config";
@@ -19,8 +18,8 @@ export function checkConfig(): boolean {
         return false;
     }
 
-    // 3. Check if a model is selected for AI services (except specific services like Coze)
-    if (servicesType.isAI(config.service) && ![services.cozecn, services.cozecom].includes(config.service)) {
+    // 3. Check if a model is selected for AI services (except specific services like Coze, Loong)
+    if (servicesType.isAI(config.service) && ![services.cozecn, services.cozecom, services.loong].includes(config.service)) {
         const model = config.model[config.service];
         const customModel = config.customModel[config.service];
         if (!model || (model === customModelString && !customModel)) {

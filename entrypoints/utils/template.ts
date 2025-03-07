@@ -1,6 +1,6 @@
 // 消息模板工具
-import {customModelString, defaultOption, services} from "./option";
-import {config} from "@/entrypoints/utils/config";
+import { customModelString, defaultOption, services } from "./option";
+import { config } from "@/entrypoints/utils/config";
 
 // openai 格式的消息模板（通用模板）
 export function commonMsgTemplate(origin: string) {
@@ -18,8 +18,8 @@ export function commonMsgTemplate(origin: string) {
         'model': model,
         "temperature": 0.7,
         'messages': [
-            {'role': 'system', 'content': system},
-            {'role': 'user', 'content': user},
+            { 'role': 'system', 'content': system },
+            { 'role': 'user', 'content': user },
         ]
     })
 }
@@ -39,8 +39,8 @@ export function deepseekMsgTemplate(origin: string) {
     const payload: any = {
         'model': model,
         'messages': [
-            {'role': 'system', 'content': system},
-            {'role': 'user', 'content': user},
+            { 'role': 'system', 'content': system },
+            { 'role': 'user', 'content': user },
         ]
     };
 
@@ -58,7 +58,7 @@ export function geminiMsgTemplate(origin: string) {
 
     return JSON.stringify({
         "contents": [
-            {"role": "user", "parts": [{"text": user}]},
+            { "role": "user", "parts": [{ "text": user }] },
         ]
     })
 }
@@ -80,8 +80,26 @@ export function claudeMsgTemplate(origin: string) {
         stream: false,
         system: system,
         messages: [
-            {role: "user", content: user},
+            { role: "user", content: user },
         ]
+    })
+}
+
+export function loongMsgTemplate(origin: string) {
+
+    let role = "normal";
+    if (config.to === "zh-Hans") {
+        role = "translate2cn"
+    } else if (config.to === "en") {
+        role = "translate2en"
+    } else {
+        origin = (config.user_role[config.service] || defaultOption.user_role)
+            .replace('{{to}}', config.to).replace('{{origin}}', origin);
+    }
+
+    return JSON.stringify({
+        prompt: origin,
+        role_biz: role
     })
 }
 
@@ -97,8 +115,8 @@ export function tongyiMsgTemplate(origin: string) {
         "model": model,
         "input": {
             "messages": [
-                {"role": "system", "content": system},
-                {"role": "user", "content": user},
+                { "role": "system", "content": system },
+                { "role": "user", "content": user },
             ]
         },
         "parameters": {}
@@ -114,7 +132,7 @@ export function yiyanMsgTemplate(origin: string) {
         'temperature': 0.7,
         'disable_search': true, // 禁用搜索
         'messages': [
-            {"role": "user", "content": user},
+            { "role": "user", "content": user },
         ],
     })
 }
@@ -130,8 +148,8 @@ export function minimaxTemplate(origin: string) {
         stream: false,
         temperature: 0.7,
         messages: [
-            {role: 'system', content: system},
-            {role: 'user', content: user},
+            { role: 'system', content: system },
+            { role: 'user', content: user },
         ]
     })
 }
