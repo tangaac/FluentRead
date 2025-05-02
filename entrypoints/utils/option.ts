@@ -301,7 +301,7 @@ export const defaultOption = {
     on: true,
     from: "auto",
     to: "zh-Hans",
-    style: 1,
+    style: 12,
     display: 1,
     hotkey: "Control",
     service: services.loong,
