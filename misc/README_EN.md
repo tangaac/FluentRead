@@ -1,6 +1,6 @@
 # FluentRead(Open Immersive Translate)
 
-> [中文](https://github.com/Bistutu/FluentRead/blob/main/README.md) | English
+> [中文](https://github.com/tangaac/FluentRead/blob/main/README.md) | English
 
 A revolutionary open-source browser translation plugin that provides everyone with a native-like reading experience.
 
