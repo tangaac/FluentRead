@@ -323,7 +323,7 @@ export const defaultOption = {
     to: "zh-Hans",
     style: 12,
     display: 1,
-    hotkey: "Control",
+    hotkey: "`",
     service: services.loong,
     custom: "http://localhost:11434/v1/chat/completions",
     system_role:
